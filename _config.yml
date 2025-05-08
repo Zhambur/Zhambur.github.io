@@ -1,3 +1,9 @@
-theme: jekyll-theme-minimal
-title: My Homepage
-description: For daily notes
+title: 我的个人主页
+lang: zh-CN
+theme: minima
+
+# 导航栏配置（minima 主题支持）
+header_pages:
+  - about.md
+  - projects.md
+  - blog.md
