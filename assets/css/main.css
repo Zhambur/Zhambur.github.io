@@ -334,10 +334,9 @@ ul.icons li .icon:before {
 
 /* Footer */
 #footer {
-  background: #1f1f1f;
-  color: rgba(255, 255, 255, 0.5);
+  background: #f8f8f8;
+  color: #777;
   padding: 4.5em 0 2.5em 0;
-  color: color;
   text-align: center;
   width: 35%;
   position: fixed;
@@ -350,7 +349,7 @@ ul.icons li .icon:before {
 }
 
 #footer .copyright {
-  color: rgba(255, 255, 255, 0.4);
+  color: #666;
   font-size: 0.8em;
   list-style: none;
   margin: 1em 0 0 0;
@@ -361,7 +360,7 @@ ul.icons li .icon:before {
   display: inline-block;
   margin-left: 1em;
   padding-left: 1em;
-  border-left: solid 1px rgba(255, 255, 255, 0.25);
+  border-left: solid 1px rgba(0, 0, 0, 0.15);
   line-height: 1;
 }
 
@@ -433,5 +432,7 @@ ul.icons li .icon:before {
   #footer {
     width: 100%;
     position: relative;
+    background: #f8f8f8;
+    border-top: 1px solid #ddd;
   }
 }
