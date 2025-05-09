@@ -1,9 +1,9 @@
 ---
 layout: page
-title: 项目
+title: project
 permalink: /projects/
 ---
 
-# 我的项目
+# My project
 
-这里可以展示你的开源项目、作品集等。
+OK, here is my demo.

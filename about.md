@@ -1,9 +1,9 @@
 ---
 layout: page
-title: 关于我
+title: About me
 permalink: /about/
 ---
 
-# 关于我
+# About me
 
-这里写你的个人简介、教育背景、兴趣爱好等。
+OK, here is my introduction.

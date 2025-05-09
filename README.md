@@ -1,6 +1,6 @@
 # 我的个人主页
 
-这是一个基于 HTML5 UP Strata 模板的个人主页，通过 GitHub Pages 托管。
+基于 HTML5 UP Strata 模板的个人主页，通过 GitHub Pages 托管。
 
 ## 使用说明
 

@@ -1,9 +1,9 @@
 ---
 layout: page
-title: 博客
+title: Blog
 permalink: /blog/
 ---
 
-# 博客
+# my blog
 
-这里可以写你的随笔、技术文章等。
+OK, here is my blog demo.
