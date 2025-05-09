@@ -26,3 +26,41 @@
     }
   });
 })(jQuery);
+
+/**
+ * 学术主页交互脚本
+ */
+
+document.addEventListener("DOMContentLoaded", function () {
+  // 导航栏滚动效果
+  const navigation = document.querySelector(".navigation");
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 50) {
+      navigation.classList.add("scrolled");
+    } else {
+      navigation.classList.remove("scrolled");
+    }
+  });
+
+  // 平滑滚动到锚点
+  document.querySelectorAll('nav a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const targetId = this.getAttribute("href");
+      const targetElement = document.querySelector(targetId);
+
+      if (targetElement) {
+        const navigationHeight = navigation.offsetHeight;
+        const targetPosition =
+          targetElement.getBoundingClientRect().top + window.pageYOffset;
+
+        window.scrollTo({
+          top: targetPosition - navigationHeight - 20,
+          behavior: "smooth",
+        });
+      }
+    });
+  });
+});

@@ -1,150 +1,194 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
-    <title>My Personal Website</title>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>张宏彬 - 个人学术主页</title>
+    <link rel="stylesheet" href="assets/css/academicpage.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&family=Noto+Sans+SC:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body class="is-preload">
-    <!-- Header -->
-    <header id="header">
-      <div class="inner">
-        <a href="#" class="image avatar"
-          ><img src="images/avatar.jpg" alt=""
-        /></a>
-        <h1>
-          <strong>Hello, I'm Hongbin Zhang(张宏彬)</strong><br />
-          welcome to my personal website<br />
-          I'm a student of Data Science and Big Data Technology at Central South
-          University.
-        </h1>
+  <body>
+    <!-- 顶部导航栏 -->
+    <header class="navigation">
+      <div class="container">
+        <div class="logo">
+          <a href="index.html">张宏彬</a>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#about">关于我</a></li>
+            <li><a href="#projects">研究项目</a></li>
+            <li><a href="#publications">论文发表</a></li>
+            <li><a href="#contact">联系方式</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
 
-    <!-- Main -->
-    <div id="main">
-      <!-- One -->
-      <section id="one">
-        <header class="major">
-          <h2>about me</h2>
-        </header>
-        <p>I love coding and math.</p>
-        <ul class="actions">
-          <li><a href="/about" class="button">more about me</a></li>
-        </ul>
-      </section>
+    <!-- 简介部分 -->
+    <section class="profile-section">
+      <div class="container">
+        <div class="profile-content">
+          <div class="profile-image">
+            <img src="images/avatar.jpg" alt="张宏彬照片" />
+          </div>
+          <div class="profile-details">
+            <h1>张宏彬 <span class="english-name">Hongbin Zhang</span></h1>
+            <h2>中南大学 · 数据科学与大数据技术专业</h2>
+            <p class="bio">
+              我目前在中南大学攻读数据科学与大数据技术专业，研究兴趣包括机器学习、数据挖掘与人工智能应用。
+            </p>
 
-      <!-- Two -->
-      <section id="two">
-        <h2>my projects</h2>
-        <div class="row">
-          <article class="col-6 col-12-xsmall work-item">
-            <a href="images/fulls/01.jpg" class="image fit thumb"
-              ><img src="images/thumbs/01.jpg" alt=""
-            /></a>
-            <h3>project one</h3>
-            <p>a short description of project one.</p>
-          </article>
-          <article class="col-6 col-12-xsmall work-item">
-            <a href="images/fulls/02.jpg" class="image fit thumb"
-              ><img src="images/thumbs/02.jpg" alt=""
-            /></a>
-            <h3>project two</h3>
-            <p>a short description of project two.</p>
-          </article>
+            <div class="profile-links">
+              <a href="mailto:b74735731@gmail.com" class="link"
+                ><i class="fas fa-envelope"></i> b74735731@gmail.com</a
+              >
+              <a href="https://github.com/Zhambur" class="link"
+                ><i class="fab fa-github"></i> GitHub</a
+              >
+              <!-- 添加更多社交媒体链接 -->
+            </div>
+          </div>
         </div>
-        <ul class="actions">
-          <li><a href="/projects" class="button">查看所有项目</a></li>
-        </ul>
-      </section>
+      </div>
+    </section>
 
-      <!-- Three -->
-      <section id="three">
-        <h2>my blog</h2>
-        <div class="row">
-          <div class="col-12">
-            <ul class="alt">
+    <!-- 内容主体 -->
+    <main>
+      <!-- 关于我 -->
+      <section id="about" class="content-section">
+        <div class="container">
+          <h2 class="section-title">关于我</h2>
+          <div class="section-content">
+            <p>
+              我是一名充满热情的数据科学学生，对机器学习和数据分析有着浓厚的兴趣。在学术研究过程中，我专注于将数据科学技术应用于实际问题，同时也热衷于编程与数学。
+            </p>
+
+            <h3>教育背景</h3>
+            <ul class="education-list">
               <li>
-                <h4><a href="#">first blog</a></h4>
-                <p>a short description of first blog.</p>
+                <span class="year">2020 - 至今</span>
+                <div class="education-item">
+                  <h4>中南大学</h4>
+                  <p>数据科学与大数据技术专业，本科</p>
+                </div>
+              </li>
+              <!-- 可添加更多教育经历 -->
+            </ul>
+
+            <h3>技能专长</h3>
+            <ul class="skills-list">
+              <li>
+                <span class="skill-category">编程语言:</span> Python, R, Java
               </li>
               <li>
-                <h4><a href="#">second blog</a></h4>
-                <p>a short description of second blog.</p>
+                <span class="skill-category">数据分析:</span> Pandas, NumPy, SQL
+              </li>
+              <li>
+                <span class="skill-category">机器学习:</span> PyTorch,
+                TensorFlow, Scikit-learn
+              </li>
+              <li>
+                <span class="skill-category">其他工具:</span> Git, LaTeX, Docker
               </li>
             </ul>
           </div>
         </div>
-        <ul class="actions">
-          <li><a href="/blog" class="button">view all blogs</a></li>
-        </ul>
       </section>
 
-      <!-- Four -->
-      <section id="four">
-        <h2>contact me</h2>
-        <p>
-          If you have any questions or collaboration opportunities, please feel
-          free to contact me.
-        </p>
-        <div class="row">
-          <div class="col-12">
-            <ul class="labeled-icons">
-              <li>
-                <h3 class="icon solid fa-envelope">
-                  <span class="label">email</span>
-                </h3>
+      <!-- 研究项目 -->
+      <section id="projects" class="content-section">
+        <div class="container">
+          <h2 class="section-title">研究项目</h2>
+          <div class="projects-grid">
+            <div class="project-card">
+              <h3>项目一</h3>
+              <p>
+                项目一的简要描述。这是一个关于数据分析的项目，主要研究内容包括...
+              </p>
+              <div class="project-links">
+                <a href="#" class="button">项目详情</a>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <h3>项目二</h3>
+              <p>
+                项目二的简要描述。这是一个关于机器学习的项目，主要研究内容包括...
+              </p>
+              <div class="project-links">
+                <a href="#" class="button">项目详情</a>
+              </div>
+            </div>
+
+            <!-- 可以添加更多项目 -->
+          </div>
+        </div>
+      </section>
+
+      <!-- 论文发表 -->
+      <section id="publications" class="content-section">
+        <div class="container">
+          <h2 class="section-title">论文发表</h2>
+          <div class="section-content">
+            <ul class="publications-list">
+              <li class="publication-item">
+                <h3>论文标题示例</h3>
+                <p class="authors">张宏彬, 合作者A, 合作者B</p>
+                <p class="journal"><em>期刊/会议名称</em>, 2022</p>
+                <div class="publication-links">
+                  <a href="#" class="button small">PDF</a>
+                  <a href="#" class="button small">代码</a>
+                  <span class="citation-count"
+                    ><i class="fas fa-quote-right"></i> 被引用: 5</span
+                  >
+                </div>
+              </li>
+
+              <!-- 可以添加更多论文 -->
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 联系方式 -->
+      <section id="contact" class="content-section">
+        <div class="container">
+          <h2 class="section-title">联系方式</h2>
+          <div class="contact-content">
+            <div class="contact-info">
+              <p>
+                <i class="fas fa-envelope"></i>
                 <a href="mailto:b74735731@gmail.com">b74735731@gmail.com</a>
-              </li>
-              <li>
-                <h3 class="icon brands fa-github">
-                  <span class="label">GitHub</span>
-                </h3>
+              </p>
+              <p>
+                <i class="fab fa-github"></i>
                 <a href="https://github.com/Zhambur">github.com/Zhambur</a>
-              </li>
-            </ul>
+              </p>
+              <p><i class="fas fa-map-marker-alt"></i> 中南大学, 长沙, 中国</p>
+            </div>
           </div>
         </div>
       </section>
-    </div>
+    </main>
 
-    <!-- Footer -->
-    <footer id="footer">
-      <div class="inner">
-        <ul class="icons">
-          <li>
-            <a href="#" class="icon brands fa-github"
-              ><span class="label">Github</span></a
-            >
-          </li>
-          <li>
-            <a href="#" class="icon brands fa-linkedin"
-              ><span class="label">LinkedIn</span></a
-            >
-          </li>
-          <li>
-            <a href="#" class="icon solid fa-envelope"
-              ><span class="label">Email</span></a
-            >
-          </li>
-        </ul>
-        <ul class="copyright">
-          <li>&copy; 2024 Hongbin Zhang</li>
-          <li>design: <a href="http://html5up.net">HTML5 UP</a></li>
-        </ul>
+    <!-- 页脚 -->
+    <footer>
+      <div class="container">
+        <p>
+          &copy; 2024 张宏彬 |
+          <a href="http://html5up.net">设计感谢 HTML5 UP</a>
+        </p>
       </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.poptrox.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
   </body>
 </html>

@@ -1,0 +1,525 @@
+/* 
+ * 学术主页样式表
+ * 简洁、专业的设计风格，适合学术个人主页
+ */
+
+/* 基础样式重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 变量定义 */
+:root {
+  --primary-color: #2c3e50; /* 主要文字颜色 */
+  --secondary-color: #3498db; /* 强调颜色 */
+  --bg-color: #f9f9f9; /* 背景色 */
+  --light-bg: #ffffff; /* 浅色背景 */
+  --border-color: #e0e0e0; /* 边框颜色 */
+  --font-serif: "Noto Serif SC", Georgia, "Times New Roman", serif; /* 衬线字体 */
+  --font-sans: "Noto Sans SC", "Helvetica Neue", Arial, sans-serif; /* 无衬线字体 */
+}
+
+/* 全局样式 */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--primary-color);
+  background-color: var(--bg-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  line-height: 1.4;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-top: 2rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+  margin-top: 1.5rem;
+}
+
+p {
+  margin-bottom: 1.2rem;
+}
+
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* 导航栏 */
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--light-bg);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 1rem 0;
+}
+
+.navigation .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  font-family: var(--font-sans);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 2rem;
+}
+
+nav ul li a {
+  color: var(--primary-color);
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  text-decoration: none;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--secondary-color);
+  transition: width 0.3s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* 个人简介部分 */
+.profile-section {
+  padding-top: 6rem;
+  padding-bottom: 3rem;
+  background-color: var(--light-bg);
+}
+
+.profile-content {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.profile-image {
+  flex: 0 0 200px;
+  margin-right: 3rem;
+}
+
+.profile-image img {
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.profile-details {
+  flex: 1;
+  min-width: 300px;
+}
+
+.profile-details h1 {
+  margin-bottom: 0.5rem;
+}
+
+.english-name {
+  font-size: 0.8em;
+  color: #666;
+  font-weight: normal;
+}
+
+.profile-details h2 {
+  font-size: 1.2rem;
+  color: #555;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.bio {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.profile-links {
+  margin-top: 1.5rem;
+}
+
+.profile-links .link {
+  margin-right: 1.5rem;
+  color: var(--primary-color);
+  font-family: var(--font-sans);
+  display: inline-flex;
+  align-items: center;
+}
+
+.profile-links .link i {
+  margin-right: 0.5rem;
+  color: var(--secondary-color);
+}
+
+/* 内容部分 */
+main {
+  padding: 2rem 0 4rem 0;
+}
+
+.content-section {
+  padding: 3rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.content-section:last-child {
+  border-bottom: none;
+}
+
+.section-title {
+  margin-bottom: 2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid var(--secondary-color);
+  display: inline-block;
+}
+
+.section-content {
+  margin-top: 1.5rem;
+}
+
+/* 教育背景 */
+.education-list {
+  list-style: none;
+  margin-top: 1.5rem;
+}
+
+.education-list li {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+.year {
+  flex: 0 0 150px;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  color: var(--secondary-color);
+}
+
+.education-item {
+  flex: 1;
+}
+
+.education-item h4 {
+  margin-bottom: 0.3rem;
+}
+
+.education-item p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* 技能列表 */
+.skills-list {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.skills-list li {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+
+.skill-category {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  color: var(--primary-color);
+  margin-right: 0.5rem;
+}
+
+/* 项目网格 */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background-color: var(--light-bg);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+  margin-top: 0;
+}
+
+.project-links {
+  margin-top: 1.5rem;
+}
+
+/* 论文列表 */
+.publications-list {
+  list-style: none;
+  margin-top: 2rem;
+}
+
+.publication-item {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.publication-item:last-child {
+  border-bottom: none;
+}
+
+.publication-item h3 {
+  margin-bottom: 0.5rem;
+}
+
+.authors {
+  color: #555;
+  margin-bottom: 0.3rem;
+}
+
+.journal {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.publication-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.button {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: white !important;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
+  margin-right: 0.8rem;
+  margin-bottom: 0.5rem;
+  transition: background-color 0.3s ease;
+  text-decoration: none !important;
+}
+
+.button:hover {
+  background-color: #2980b9;
+}
+
+.button.small {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.8rem;
+}
+
+.citation-count {
+  color: #666;
+  font-size: 0.9rem;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.citation-count i {
+  margin-right: 0.5rem;
+  color: var(--secondary-color);
+}
+
+/* 联系方式 */
+.contact-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-info p {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info i {
+  color: var(--secondary-color);
+  margin-right: 1rem;
+  width: 20px;
+  text-align: center;
+}
+
+/* 页脚 */
+footer {
+  background-color: #f2f2f2;
+  padding: 2rem 0;
+  text-align: center;
+  color: #666;
+  border-top: 1px solid var(--border-color);
+}
+
+footer p {
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #555;
+}
+
+/* 响应式设计 */
+@media (max-width: 992px) {
+  .profile-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-image {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  .profile-links {
+    justify-content: center;
+  }
+
+  .year {
+    flex: 0 0 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navigation {
+    padding: 0.8rem 0;
+  }
+
+  .logo a {
+    font-size: 1.3rem;
+  }
+
+  nav ul li {
+    margin-left: 1.2rem;
+  }
+
+  nav ul li a {
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .profile-section {
+    padding-top: 5rem;
+  }
+
+  .education-list li {
+    flex-direction: column;
+  }
+
+  .year {
+    margin-bottom: 0.5rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  body {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .container {
+    width: 95%;
+  }
+
+  .navigation .container {
+    flex-direction: column;
+  }
+
+  .logo {
+    margin-bottom: 1rem;
+  }
+
+  nav ul {
+    justify-content: center;
+  }
+
+  nav ul li {
+    margin: 0 0.8rem;
+  }
+
+  .profile-image {
+    flex: 0 0 150px;
+  }
+}
